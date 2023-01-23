@@ -5,7 +5,7 @@
     padding: 10px;
     margin: 0px;
     width: 100%;
-    background-color: lightyellow;
+    background-color: lightgreen;
     text-align: center;
     z-index: 10;
 
@@ -19,19 +19,57 @@ body {
     background-image:url("http://3.bp.blogspot.com/-aNRb0w9Uu2E/Uk0w1v9lXjI/AAAAAAAAHrM/RipxfZqlQQ4/s1600/Texture-Backgrounds-Wallpaper-HD.jpg");
 }
 
-img {
-    margin-left: 5px;
+.img {
+    margin-left: 15px;
     margin-top: 10px;
-    width: 50%;
-    height: 50%;
+    width: 60%;
+    height: 60%;
 }
 
 #container {
-    margin-top: 10%;
-    margin-left: 20%;
-    margin-right: 10%;
-    margin-bottom: 5%;
+    margin-top: 90px;
+    margin-left: 525px;
+    margin-right: 100px;
+    margin-bottom: 100px;
 }
+
+.row {
+    position: relative;
+    align-items: center;
+}
+
+.clear {
+    clear: both;
+}
+
+.white {
+    border: 1px solid black;
+    width: 90px;
+    height: 90px;
+    background-color: white;
+    float: left;
+}
+
+.black {
+    border: 1px solid black;
+    width: 90px;
+    height: 90px;
+    background-color: #787878;
+    float: left;
+}
+
+#footer {
+    position: fixed;
+    text-align: center;
+    padding: 10px;
+    margin: 0px;
+    left: 0px;
+    width: 100%;
+    background-color: lightgreen;
+    z-index: 0;
+}
+
+
 
 .row {
     position: relative;

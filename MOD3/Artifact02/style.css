@@ -9,25 +9,26 @@
     text-align: center;
     z-index: 10;
 
-    font-family: 'ArchivoNarrowRegular';
-    font-weight: normal;
+    font-family: 'YoungSerifRegular';
+    font-weight: bold;
     font-style: normal;
     font-size: 50px;
 }
 
 body {
-    background-image:url("http://3.bp.blogspot.com/-aNRb0w9Uu2E/Uk0w1v9lXjI/AAAAAAAAHrM/RipxfZqlQQ4/s1600/Texture-Backgrounds-Wallpaper-HD.jpg");
+    background-image:url("https://static.vecteezy.com/system/resources/previews/011/589/026/original/aesthetic-sage-green-background-free-vector.jpg");
+    background-position: center;
 }
 
-.img {
-    margin-left: 15px;
+.piece {
+    margin-left: 18px;
     margin-top: 10px;
     width: 60%;
     height: 60%;
 }
 
 #container {
-    margin-top: 90px;
+    margin-top: 100px;
     margin-left: 525px;
     margin-right: 100px;
     margin-bottom: 100px;
@@ -70,39 +71,3 @@ body {
 }
 
 
-
-.row {
-    position: relative;
-    align-items: center;
-}
-
-.clear {
-    clear: both;
-}
-
-.white {
-    border: 1px solid black;
-    width: 90px;
-    height: 90px;
-    background-color: white;
-    float: left;
-}
-
-.black {
-    border: 1px solid black;
-    width: 90px;
-    height: 90px;
-    background-color: #787878;
-    float: left;
-}
-
-#footer {
-    bottom: 0px;
-    padding: 10px;
-    margin: 0px;
-    left: 0px;
-    width: 100%;
-    background-color: lightyellow;
-    z-index: 0;
-    text-align: center;
-}

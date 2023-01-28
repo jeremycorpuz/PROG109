@@ -23,13 +23,12 @@ h1 {
     font-weight: normal;
     font-style: normal;
     font-size: 200%;
-    text-align: center;
-    color: tomato;
+    color: rgb(230, 137, 121);
 
     background-color: black;
-    padding: 20px;
-    margin-left: 40%;
-    margin-right: 40%;
+    width: 150px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 #content {

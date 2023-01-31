@@ -5,6 +5,7 @@ body {
     background-image: url(https://cdn.pixabay.com/photo/2016/11/08/05/01/airplane-1807486_1280.jpg);
     background-repeat: no-repeat;
     background-size: cover;
+    background-attachment: fixed;
 }
 
 a, p {

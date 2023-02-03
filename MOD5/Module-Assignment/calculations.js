@@ -4,12 +4,8 @@ var i = 1; // Set counter to 1
 var msg = '<h2>Multiplication Table</h2>'; // Message
 
 // Invalid responses
-while (table > 10 || table > 0 == false) {
-  table = prompt("Number must be between 0-10. Try again.")
-}
-
-while (table % 1 != 0) {
-  table = prompt("Enter a valid whole number from 0-10")
+while (table > 10 || table < 0 || table % 1 != 0 ) {
+  table = prompt("Number must be a whole number between 0-10. Try again.")
 }
 
 // Calculations

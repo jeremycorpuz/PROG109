@@ -1,0 +1,94 @@
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    font-family: 'MistoBook';
+    font-weight: normal;
+    font-style: normal;
+    color: rgb(221, 202, 125);
+}
+
+body {
+    background-image: url(images/brownwallpaper.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+#header {
+    display: flex;
+    background-color: rgb(83, 62, 45);
+    padding: 30px;
+    top: 0px;
+    align-items: center;
+    justify-content: space-between;
+    position: sticky;
+}
+
+#nav {
+    color: whitesmoke;
+    border: 3px solid whitesmoke;
+    border-radius: 35px;
+    padding-right: 30px;
+}
+
+li {
+    display: inline-block;
+    margin: 1em;
+    font-size: 18px;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+a:hover {
+    color: rgb(221, 202, 125);
+    transition: ease 0.5s;
+}
+
+li, h2, #content, label{
+    font-family: 'GlacialIndifferenceRegular';
+    font-weight: bold;
+    font-size: normal;
+}
+/* Home page */
+#content {
+    text-align: center;
+    font-size: 80px;
+    color: rgb(36, 35, 49);
+    font-weight: bold;
+}
+/* Header backgrounds */
+#about, #coursework, #artifacts, #contact, #creative, #modules, #validator{
+    background-color:rgb(36, 35, 49);
+    color: rgb(221, 202, 125);
+    padding: 10px;
+    margin: 50px;
+    text-align: center;
+}
+/* Validated */
+#encompassing, #html-validator, #css-validator {
+    border: rgb(221, 202, 125) solid 5px;
+    margin: 10px;
+}
+
+#encompassing {
+    background-color: #8eb8fa;
+}
+
+#html-validator {
+    background-color: #fcf4c2;
+}
+
+#css-validator {
+    background-color: #f4c2fc;
+}
+
+
+
+

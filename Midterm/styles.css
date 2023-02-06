@@ -54,7 +54,7 @@ a:hover {
 li, h2, #one, #two, label, #thankyou {
     font-family: 'GlacialIndifferenceRegular';
     font-weight: bold;
-    font-size: normal;
+    font-style: normal;
     color: rgb(228, 216, 167);
 }
 /* Header and Content Backgrounds */
@@ -109,7 +109,7 @@ form {
 #encompassing {
     font-family: 'GlacialIndifferenceRegular';
     font-weight: bold;
-    font-size: normal;
+    font-style: normal;
 
     text-align: center;
     background-color: #8eb8fa;

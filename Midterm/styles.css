@@ -115,6 +115,7 @@ form {
     background-color: #8eb8fa;
     border: rgb(221, 202, 125) solid 5px;
     border-radius: 10px;
+    margin-bottom: 20px;
 }
 #html, #css {
     display: inline-block;

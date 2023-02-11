@@ -87,7 +87,7 @@ h2 {
     color: #8d99ae;
 }
 /* Artifacts Page */
-#artifactImages {
+.artifactImages {
     width: 400px;
     height: 400px;
     object-fit: cover;

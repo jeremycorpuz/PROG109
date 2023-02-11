@@ -117,17 +117,17 @@ form {
     border-radius: 10px;
     margin-bottom: 20px;
 }
-#html, #css {
+.html, .css {
     display: inline-block;
     margin: 20px;
 }
 
-#html img, #css img {
+.html img, .css img {
     width: 100%;
     height: auto;
 }
 
-#html {
+.html {
     width: 40%;
     border: rgb(221, 202, 125) solid 5px;
     border-radius: 10px;
@@ -135,7 +135,7 @@ form {
     padding: 10px;
 }
 
-#css {
+.css {
     width: 50%;
     border: rgb(221, 202, 125) solid 5px;
     border-radius: 10px;

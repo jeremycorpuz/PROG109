@@ -13,34 +13,42 @@
     <h1>Artifact #3 - Create a Rhombus</h1>
     <h2>Created by Jeremy Labuguen</h2>
     <hr>
-
+    <div id="content">
     <!-- Rhombus Size -->
-    <label>What is the size of Your Rhombus?</label><br>
-    <input type="text" id="rHeight" value="5" size="5"><br> 
+    <label>What is the size of Your Rhombus?</label>
+    <br>
+    <input type="text" id="rHeight" value="5" size="5">
+    <br> 
 
     <!-- Even Position Color -->
-    <label>Color for Even position:</label><br>
+    <label>Color for Even position:</label>
+    <br>
     <select id="colorEven">
         <option value="#4169E1">Royal Blue</option>
         <option value="#F08080">Light Coral</option>
         <option value="#FFD700">Gold</option>
-    </select><br>
+    </select>
+    <br>
 
     <!-- Odd Position Color -->
-    <label>Color for Odd position:</label><br>
+    <label>Color for Odd position:</label>
+    <br>
     <select id="colorOdd">
         <option value="#F4A460">Sandy Brown</option>
         <option value="#2E8B57">Sea Green</option>
         <option value="#DA70D6">Orchid</option>
-    </select><br>
+    </select>
+    <br>
 
     <!-- Rhombus Symbol -->
-    <label>Choose a Symbol for Your Rhombus:</label><br>
+    <label>Choose a Symbol for Your Rhombus:</label>
+    <br>
     <select id="symbol">
     <option value="☺">☺</option>
     <option value="★">★</option>
     <option value="♡">♡</option>
-    </select><br>
+    </select>
+    <br>
 
     <!-- Button -->
     <button onclick="createRhombus(document.getElementById('rHeight').value,
@@ -48,15 +56,13 @@
     document.getElementById('colorOdd').value,
     document.getElementById('symbol').value);">Display Rhombus</button>
     <br>
-    <div id="top">
-        <div id="upLeft"></div>
-        <div id="upRight"></div>
-    </div>
-    <div id="bottom">
-        <div id="downLeft"></div>
-        <div id="downRight"></div>
-    </div>
+    
+    <!-- Rhombus -->
+    <div id="upLeft"></div>
+    <div id="upRight"></div>
+    <br>
+    <div id="downLeft"></div>
+    <div id="downRight"></div>
     <script src="script.js"></script>
-
 </body>
 </html>

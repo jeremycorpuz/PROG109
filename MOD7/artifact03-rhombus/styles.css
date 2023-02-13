@@ -1,6 +1,7 @@
-#top {
+#upLeft, #upRight {
     display: inline-block;
 }
-#upRight {
-    justify-content: left;
+
+#downLeft, #downRight {
+    display: inline-block;
 }

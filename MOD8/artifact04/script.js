@@ -142,7 +142,7 @@ function validateForm() {
         } 
     }
 
-    function validateState () {
+    function validateState() {
         var state = document.getElementById("state").value;
         if (state === null || state === "Select State") {
             error += "<p>Please select a state</p>";
@@ -154,7 +154,7 @@ function validateForm() {
         }
     }
     // Country validation
-    function validateCountry () {
+    function validateCountry() {
         var country = document.getElementById("country").value;
         if (country === null || country === "Select Country") {
             error += "<p>Please select a country</p>";
@@ -166,7 +166,7 @@ function validateForm() {
         }
     }
     // Zipcode validation
-    function validateZipCode (country) {
+    function validateZipCode() {
         var zipcode = document.getElementById("zipcode").value;
 
         if (document.getElementById("country").value === "United States of America") {

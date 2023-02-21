@@ -31,3 +31,12 @@ button {
 #errorMessages {
     color:red;
 }
+
+#validators {
+    position: absolute;
+    bottom: 0;
+}
+/* Weird underline where link can be seen next to image */
+a {
+    text-decoration: none;
+}

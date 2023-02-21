@@ -1,91 +1,186 @@
 function validateForm() {
-    // Status remains false by default
-    var validator = false;
-    // var validZipcode = false;
-
+    // Error message variable
+    let error = "";
     // Expressions much match alphanumeric characters and spaces
     var re = /^[\w ]+$/;
 
-    // Error message variable
-    let error = "";
+    var result = true;
 
-    // Input variables
-    var firstname = document.getElementById("firstname").value;
-    var lastname = document.getElementById("lastname").value;
-    var email = document.getElementById("email").value;
-    var phone = document.getElementById("phone").value;
-    var username = document.getElementById("username").value;
-    var password = document.getElementById("password").value;
-    var address = document.getElementById("address").value;
-    var city = document.getElementById("city").value;
-    var state = document.getElementById("state").value;
-    var country = document.getElementById("country").value;
-    var zipcode = document.getElementById("zipcode").value;
+    if (!validateFirstName()) {
+        result = false;
+    }
+    if (!validateLastName()) {
+        result = false;
+    }
+    if (!validateEmail()) {
+        result = false;
+    }
+    if (!validatePhone()) {
+        result = false;
+    }
+    if (!validateUsername()) {
+        result = false;
+    }
+    if (!validatePassword()) {
+        result = false;
+    }
+    if (!validateAddress()) {
+        result = false;
+    }
+    if (!validateCity()) {
+        result = false;
+    }
+    if (!validateState()) {
+        result = false;
+    }
+    if (!validateCountry()) {
+        result = false;
+    }
+    // Zipcode if applicable
+    if (!validateZipCode()) {
+        result = false;
+    }
+    return result;
 
-    
+    // First name validation
+    function validateFirstName() {
+        var firstname = document.getElementById("firstname").value;
 
-    // If statements
-    if (firstname === null || firstname == "" || firstname.length > 20) {
-        error += "<p>The first name is required and cannot exceed 20 characters</p>";
-        document.getElementById("errorMessages").innerHTML = error;
+        if (firstname === null || firstname == "" || firstname.length > 20 || !re.test(firstname)) {
+            error += "<p>The first name is required and cannot exceed 20 characters</p>";
+            document.getElementById("errorMessages").innerHTML = error;
+            return false;
+        }
+        else {
+            return true;
+        }
+    }
+    // Last name validation
+    function validateLastName() {
+        var lastname = document.getElementById("lastname").value;
+
+        if (lastname === null || lastname === "" || lastname.length > 50) {
+            error += "<p>The last name is required and cannot exceed 50 characters</p>";
+            document.getElementById("errorMessages").innerHTML = error;
+            return false
+        }
+        else {
+            return true;
+        }
+    }
+    // Email validation
+    function validateEmail() {
+        var email = document.getElementById("email").value;
+
+        if (email === null || email === "") {
+            error += "<p>Invalid email</p>";
+            document.getElementById("errorMessages").innerHTML = error;
+            return false;
+        }
+        else {
+            return true;
+        }
+    }
+    // Phone validation
+    function validatePhone() {
+        var phone = document.getElementById("phone").value;
+        if (phone === null || phone.length > 15 || phone === "") {
+            error += "<p>Invalid phone number</p>";
+            document.getElementById("errorMessages").innerHTML = error;
+            return false;
+        }
+        else {
+            return true;
+        }
+    }
+    // Username validation
+    function validateUsername () {
+        var username = document.getElementById("username").value;
+        if (username === null || username.length > 12 || username === "") {
+            error += "<p>The username is required and cannot exceed 12 characters</p>";
+            document.getElementById("errorMessages").innerHTML = error;
+            return false;
+        }
+        else {
+            return true;
+        }
+    }
+    // Password validation
+    function validatePassword() {
+        var password = document.getElementById("password").value;
+        if (password === null || password.length > 7 || password === "") {
+            error += "<p>Password cannot exceed 7 characters</p>";
+            document.getElementById("errorMessages").innerHTML = error;
+            return false;
+        }
+        else {
+            return true
+        }
+    }
+    // Address validation
+    function validateAddress () {
+        var address = document.getElementById("address").value;
+        if (address === null || address === "") {
+            error += "<p>Address is required</p>";
+            document.getElementById("errorMessages").innerHTML = error;
+            return false;
+        }
+        else {
+            return true;
+        }
+    }
+    // City validation
+    function validateCity() {
+        var city = document.getElementById("city").value;
+        if (city === null || city === "") {
+            error += "<p>City is required</p>";
+            document.getElementById("errorMessages").innerHTML = error;
+            return false;
+        }   
+        else {
+            return true;
+        } 
     }
 
-    if (lastname === null || lastname === "" || lastname.length > 50){
-        error += "<p>The last name is required and cannot exceed 50 characters</p>";
-        document.getElementById("errorMessages").innerHTML = error;
+    function validateState () {
+        var state = document.getElementById("state").value;
+        if (state === null || state === "Select State") {
+            error += "<p>Please select a state</p>";
+            document.getElementById("errorMessages").innerHTML = error;
+            return false;
+        }
+        else {
+            return true;
+        }
     }
-
-    if (email === null || email === "") {
-        error += "<p>Invalid email</p>";
-        document.getElementById("errorMessages").innerHTML = error;
+    // Country validation
+    function validateCountry () {
+        var country = document.getElementById("country").value;
+        if (country === null || country === "Select Country") {
+            error += "<p>Please select a country</p>";
+            document.getElementById("errorMessages").innerHTML = error;
+            return false;
+        }
+        else {
+            return true;
+        }
     }
+    // Zipcode validation
+    function validateZipCode (country) {
+        var zipcode = document.getElementById("zipcode").value;
 
-    if (phone === null || phone.length > 15 || phone === "") {
-        error += "<p>Invalid phone number</p>";
-        document.getElementById("errorMessages").innerHTML = error;
+        if (document.getElementById("country").value === "United States of America") {
+            if (zipcode.length != 5 || zipcode === null || zipcode === "") {
+                error += "<p>Zipcode is required and must be 5 digits</p>";
+                document.getElementById("errorMessages").innerHTML = error;
+                return false;
+            }
+            else {
+                return true;
+            }
+        }
+        else {
+            return true;
+        }
     }
-
-    if (username === null || username.length > 12 || username === "") {
-        error += "<p>The username is required and cannot exceed 12 characters</p>";
-        document.getElementById("errorMessages").innerHTML = error;
-    }
-
-    if (password === null || password.length > 7 || password === "") {
-        error += "<p>Password cannot exceed 7 characters</p>";
-        document.getElementById("errorMessages").innerHTML = error;
-    }
-
-    if (address === null || address === "") {
-        error += "<p>Address is required</p>";
-        document.getElementById("errorMessages").innerHTML = error;
-    }
-
-    if (city === null || city === "") {
-        error += "<p>City is required</p>";
-        document.getElementById("errorMessages").innerHTML = error;
-    }
-
-    if (state === null || state === "Select State") {
-        error += "<p>Please select a state</p>";
-        document.getElementById("errorMessages").innerHTML = error;
-    }
-
-    if (country === null || country === "Select Country") {
-        error += "<p>Please select a country</p>";
-        document.getElementById("errorMessages").innerHTML = error;
-    }
-
-    // if (country === "United States of America") {
-    //     while (zipcode.length > 5 || zipcode === null || zipcode === "")
-    //     error += "<p>Zipcode is required and cannot exceed 5 digits</p>";
-    //     document.getElementById("errorMessages").innerHTML = error;
-    // }
-
-    // Zipcode validation if country is USA
-
-    else {
-        validator = true;
-    }
-
-    return validator;
 }

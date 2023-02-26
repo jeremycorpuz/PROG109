@@ -4,6 +4,7 @@ function validateForm() {
     // Expressions much match alphanumeric characters and spaces
     var re = /^[\w ]+$/;
 
+
     var result = true;
 
     if (!validateFirstName()) {
@@ -51,6 +52,11 @@ function validateForm() {
             document.getElementById("errorMessages").innerHTML = error;
             return false;
         }
+        if (/[0-9]/.test(firstname)) {
+            error += "<p>The first name should only contain alphabetical values</p>";
+            document.getElementById("errorMessages").innerHTML = error;
+            return false;
+        }
         else {
             return true;
         }
@@ -63,6 +69,11 @@ function validateForm() {
             error += "<p>The last name is required and cannot exceed 50 characters</p>";
             document.getElementById("errorMessages").innerHTML = error;
             return false
+        }
+        if (/[0-9]/.test(lastname)) {
+            error += "<p>The last name should only contain alphabetical values</p>";
+            document.getElementById("errorMessages").innerHTML = error;
+            return false;
         }
         else {
             return true;
@@ -86,6 +97,11 @@ function validateForm() {
         var phone = document.getElementById("phone").value;
         if (phone === null || phone.length > 15 || phone === "") {
             error += "<p>Invalid phone number</p>";
+            document.getElementById("errorMessages").innerHTML = error;
+            return false;
+        }
+        if (!parseInt(phone)) {
+            error += "<p>The phone number should only contain numerical values</p>";
             document.getElementById("errorMessages").innerHTML = error;
             return false;
         }

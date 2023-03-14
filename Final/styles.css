@@ -1,0 +1,201 @@
+html, body {
+    margin: 0;
+    padding: 0;
+}
+/* Background Image */
+body {
+    background-image: url(images/bluebackground.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+#header {
+    display: flex;
+    background-color: #8d99ae;
+    padding: 20px;
+    top: 0px;
+    align-items: center;
+    justify-content: space-between;
+    position: sticky;
+    z-index: 1;
+}
+/* Logo */
+h1 {
+    font-family: 'MistoBook';
+    font-weight: bold;
+    font-style: normal;
+    color:  #edf2f4;
+    text-align: center;
+}
+/* Navigation Bar */
+#nav {
+    border: 3px solid #edf2f4;
+    border-radius: 35px;
+    padding-right: 30px;
+}
+
+li {
+    display: inline-block;
+    margin: 1em;
+    font-size: 18px;
+}
+
+a {
+    color: #edf2f4;
+    text-decoration: none;
+}
+
+a:hover {
+    color: rgb(228, 216, 167);
+    transition: ease 0.5s;
+}
+
+li, h2, h3, #one, label, #thankyou {
+    font-family: 'GlacialIndifferenceRegular';
+    font-weight: bold;
+    font-size: normal;
+    color: rgb(228, 216, 167);
+}
+/* Header and Content Backgrounds */
+h2 {
+    background-color:#8d99ae;
+    border: rgb(228, 216, 167) 20px solid;
+    padding: 20px;
+    margin-left: 40%;
+    margin-right: 40%;
+    text-align: center;
+}
+
+.content {
+    background-color:#8d99ae;
+    border: rgb(228, 216, 167) 5px solid;
+    margin-left: 40px;
+    margin-right: 40px;
+    margin-bottom: 40px;
+    align-items: center;
+    padding: 40px;
+}
+/* Home Page */
+#one, #two, #thankyou {
+    text-align: center;
+    font-size: 60px;
+    font-weight: bold;
+}
+
+#one {
+    color: rgb(228, 216, 167);
+}
+
+#two {
+    color: #8d99ae;
+    margin-left: 70px;
+    margin-right: 70px
+}
+/* Artifacts Page */
+.artifactImages {
+    width: 400px;
+    height: 400px;
+    object-fit: cover;
+}
+/* Contact Page */
+#contact {
+    background-color: #8d99ae;
+}
+form {
+    display: block;
+    text-align: center;
+    padding: 20px;
+}
+/* Validated Page */
+#validator {
+    margin-left: 40px;
+    margin-right: 40px;
+}
+#encompassing {
+    font-family: 'GlacialIndifferenceRegular';
+    font-weight: bold;
+    font-size: normal;
+
+    text-align: center;
+    background-color: #8eb8fa;
+    border: rgb(221, 202, 125) solid 5px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+.html, .css {
+    display: inline-block;
+    margin: 20px;
+}
+
+.html img, .css img {
+    width: 100%;
+    height: auto;
+}
+
+.html {
+    width: 40%;
+    border: rgb(221, 202, 125) solid 5px;
+    border-radius: 10px;
+    background-color: #fcf4c2;
+    padding: 10px;
+}
+
+.css {
+    width: 24%;
+    border: rgb(221, 202, 125) solid 5px;
+    border-radius: 10px;
+    background-color: #f4c2fc;
+    padding: 10px;
+}
+
+p {
+    color: white;
+    font-family: 'GlacialIndifferenceRegular';
+    font-size: 20px;
+}
+
+#artwork {
+    display: flex;
+    float: left;
+}
+
+#portfolio {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: black;
+    max-width: 100%;
+    overflow: auto;
+}
+
+#portfolio img {
+    display: inline;
+    justify-content: space-around;
+    padding: 20px;
+}
+
+#creativeDescription {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#video {
+    padding: 40px;
+    width: 560px; /* you have to have a size or this method doesn't work */
+    height: 315px; /* think about making these max-width instead - might give you some more responsiveness */
+    margin: auto;
+}
+
+.catalog {
+    text-decoration: underline;
+    font-size: 20px;
+    color:#0000EE;
+}
+
+.course li{
+    display: block;
+    color: white;
+}

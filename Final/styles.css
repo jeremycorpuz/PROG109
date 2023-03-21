@@ -203,3 +203,18 @@ iframe {
     display: block;
     color: white;
 }
+
+#piece01 {
+    height: 30%;
+    width: 30%;
+}
+
+#piece02 {
+    height: 40%;
+    width: 40%;
+}
+
+#piece03 {
+    height: 20%;
+    width: 20%;
+}
